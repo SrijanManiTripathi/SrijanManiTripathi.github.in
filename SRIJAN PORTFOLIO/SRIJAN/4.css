@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('bgimg.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.dashboard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 200px;
+    height: 100%;
+    transform: translateX(-200px);
+    transition: transform 0.3s ease;
+    z-index: 2; /* Ensure the dashboard is above other content */
+}
+
+.dashboard.open {
+    transform: translateX(0);
+}
+
+.dashboard .toggle {
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    background-color: #ffffffaf;
+    color: #000000;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dashboard nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.dashboard nav ul li {
+    margin: 20px 0;
+}
+
+.dashboard nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.dashboard nav ul li a:hover {
+    color: #8800ff;
+}
+
+main {
+    padding: 20px;
+    width: calc(100% - 200px); /* Adjusted width to accommodate dashboard */
+    text-align: center;
+    transition: width 0.3s ease;
+}
+
+.dashboard.open + main {
+    width: calc(100% - 200px);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    width: 50%; /* Adjust width as needed */
+    background-color: rgba(2, 2, 2, 0.9);
+    color: #ffffff;
+    padding: 20px;
+    margin: 20px 20px; /* Adjusted margin for both left and right cards */
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card.left {
+    align-self: flex-start;
+}
+
+.card.right {
+    align-self: flex-end;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 1.2em;
+    font-weight: bold; /* Make subtopics bold */
+    margin-bottom: 5px;
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 20px; /* Left padding for lists */
+}
+
+.card ul li {
+    margin: 5px 0;
+    font-weight: normal; /* Ensure points are not as bold as subtopics */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    padding: 10px;
+    background-color: #3f3f3f;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    opacity: 0.9;
+}
+/* Mobile styles */
+@media (max-width: 400px) {
+    .card {
+        position: relative;
+        width: 106%;
+        background-color: rgba(2, 2, 2, 0.9);
+        color: #ffffff;
+        padding: 18px;
+        margin: 18px -17px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease;
+    }
+}    
+@media (max-width: 600px) {
+    .card {
+        position: relative;
+        width: 106%;
+        background-color: rgba(2, 2, 2, 0.9);
+        color: #ffffff;
+        padding: 18px;
+        margin: 18px -17px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease;
+    }
+}    

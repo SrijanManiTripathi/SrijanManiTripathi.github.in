@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Verification</title>
+    <link rel="stylesheet" href="3.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="toggle" onclick="toggleDashboard()">☰</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> <br>
+                <li><a href="news.html">News</a></li>
+                <br><li><a href="about.html">About</a></li><br>
+                <li><a href="contact.html">Contact</a></li><br>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <div class="text-background">
+        <h2>Phone Number Verification</h2>
+    </div>
+<div>
+        <p>Solve the captcha below to see my phone number:</p>       
+        <div id="captcha-question"></div>
+        <br>
+
+        <input type="text" id="captcha-answer" placeholder="Your answer">
+        <button onclick="checkCaptcha()">Submit</button><br>
+
+        <div id="result" class="hidden"></div><br>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 srijan_mani_tripathi. All rights reserved.</p>
+    </footer>
+    <script src="3.js"></script>
+</body>
+</html>
